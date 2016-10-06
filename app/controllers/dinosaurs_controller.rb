@@ -1,4 +1,5 @@
 class DinosaursController < ApplicationController
+
   def index
     @dinosaurs = Dinosaur.all
   end
@@ -51,6 +52,8 @@ class DinosaursController < ApplicationController
   def dinosaur_params
   params.require(:dinosaur).permit(:name, :age, :image_url)
   end
+
+
 
 
 
