@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get "dinosaurs" => "dinosaurs#index"
     get 'dinosaurs/new' => "dinosaurs#new"
     get "dinosaurs/:id" => "dinosaurs#show", as: :dinosaur
+
+    resources :dinosaurs
   end
 end
