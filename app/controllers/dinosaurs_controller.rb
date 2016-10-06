@@ -10,7 +10,7 @@ class DinosaursController < ApplicationController
   def new
     @dinosaur = Dinosaur.new
   end
-  
+
   def create
       dinosaur_params = params.require( :dinosaur ).permit( :name, :age, :image_url )
 
@@ -22,5 +22,10 @@ class DinosaursController < ApplicationController
          render 'new'
       end
    end
+
+   def edit
+      @dinosaur = Dinosaur.find(params[:id])
+   end
+
 
 end
