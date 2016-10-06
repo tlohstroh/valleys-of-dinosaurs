@@ -1,0 +1,10 @@
+<h1>Dinosaurs</h1>
+
+<% @dinosaurs.each do |dinosaur| %>
+  <p><%= dinosaur.name %></p>
+<% end %>
+
+<!-- Link dinosaurs on index page to their show page: -->
+<% @dinosaurs.each do |dinosaur| %>
+    <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
+<% end %>
